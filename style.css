@@ -1,11 +1,10 @@
-* body {   
+ body {   
 
   background-color: #000000;  
   color: #ffffff;
   text-align: center;
-  font-family: 'Open Sans', Arial, sans-serif;;  
+  font-family: 'Open Sans', Arial, sans-serif;
 }
-
 
 h1 {
   font-family: 'Blanka', sans-serif;
@@ -17,7 +16,8 @@ h1 {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+  max-width: 100%; 
 }
 .logo .globo {
   position: absolute;
@@ -33,7 +33,7 @@ nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  padding: 0%;
+  padding: 0;
   margin: 2rem 0;
   gap: 50px;  
 }
@@ -64,6 +64,7 @@ main {
   gap: 50px;
   margin: 50px auto;  
   align-items: center;
+  transition: transform 0.3s ease;
 }
 .esquerda {
 flex-direction: row-reverse;
@@ -81,6 +82,86 @@ img {
   display: block;
 }
 
+ footer {
+    background-color: #0d0d0d;
+    color: #ffffff;    
+    padding: 1rem 1rem;
+    margin-top: 80px;     
+    }
+.rodape-secao p,
+.rodape-secao ul {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Adicione esta linha ou verifique se ela já existe */       
+}
+/* Container principal para o conteúdo do rodapé */
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que as seções quebrem a linha em telas pequenas */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;    
+}
+/* Estilo para cada seção do rodapé */
+.rodape-secao {
+    flex-basis: 250px; /* Define uma base para o tamanho de cada seção */         
+  }
+  footer a {
+  text-decoration: none;   /* tira o sublinhado */
+  color: white;            /* mantém branco */
+}
+
+footer a:visited {
+  color: white;            /* não muda a cor quando já clicado */
+}
+
+footer a:hover {
+  color: #999797;          /* opcional: cor diferente ao passar o mouse */
+}
+
+footer a:active,
+footer a:focus {
+  outline: none;           /* tira contorno feio */
+}
+.redes-sociais {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.redes-sociais a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1a1a1a; /* bolinha escura */
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.redes-sociais a:hover {
+  background-color: #ffffff; /* bolinha clara no hover */
+  color: #000000;            /* ícone fica preto */
+  transform: scale(1.1);
+}
+
+.rodape-direitos {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ccc;
+}
+
+/* --- RESPONSIVO --- */
 @media (max-width: 768px) {
   h1 {
     font-size: 40px;
@@ -99,6 +180,13 @@ img {
     margin: 20px auto;
     text-align: left;
   }
+  .rodape-conteudo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .redes-sociais {
+    justify-content: center;
+  }
 }
- 
-
